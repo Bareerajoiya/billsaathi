@@ -40,9 +40,6 @@ def card(label, value, color):
 with st.sidebar:
     st.markdown("<div class='brand' style='font-size:1.6rem'>Bill<span>Saathi</span></div>"
                 "<div class='tagline'>Bijli ka bill, ab asaan.</div>", unsafe_allow_html=True)
-    if st.button("➕ New analysis", use_container_width=True):
-        st.session_state.current_id = None
-        st.rerun()
     st.header("📂 Saved bills")
     saved = db.list_analyses()
     if not saved:
@@ -65,8 +62,7 @@ with st.sidebar:
 
 # --------------------------------------------------------------------- main
 st.markdown("<div class='brand'>Bill<span>Saathi</span></div>"
-            "<div class='tagline'>Bijli ke bill ko samjhein, aasaan zubaan mein. "
-            "Gemma 4 bill padhta hai, Python numbers check karta hai, aur Gemma aap ko samjhata hai.</div>",
+            "<div class='tagline'>Bijli ka bill, ab asaan.</div>",
             unsafe_allow_html=True)
 
 model_label = st.selectbox("Model", list(analyzer.MODELS))
