@@ -1,12 +1,12 @@
 # 💡 BillSaathi
 
-**Our app helps Pakistani households understand their electricity bill using Gemma 4.**
+**My app helps Pakistani households understand their electricity bill using Gemma 4.**
 
-Upload a photo of an electricity bill. Gemma 4 reads the numbers, plain Python checks them, and Gemma 4 explains the result in English, Roman Urdu or Urdu, with next steps and a polite draft request to the sub-division office. BillSaathi never says a bill is wrong; it says what is worth verifying.
+Upload a photo of an electricity bill. Gemma 4 reads the numbers, plain Python checks them, and Gemma 4 explains the result in English, Roman Urdu or Urdu, with next steps and a polite draft request to the sub-division office. BillSaathi never says a bill is wrong; it only says what is worth verifying.
 
 ## How Gemma 4 is used
-- **Read:** Gemma 4 (vision) turns the bill photo into structured data. It only copies numbers.
-- **Check:** plain Python (`checks.py`) verifies readings, billing days, usage history and protected status.
+- **Read:** Gemma 4 (vision) turns the bill photo into structured data. It only copies numbers and never calculates.
+- **Check:** plain Python (`checks.py`) verifies readings, billing days, usage history and protected status. No AI is used here, so the same bill always gives the same result.
 - **Explain:** Gemma 4 writes the explanation in the chosen language.
 - Models: `gemma-4-31b-it` and `gemma-4-26b-a4b-it`, called through the **Gemini API (Google AI Studio)**.
 
