@@ -13,7 +13,8 @@ if "current_id" not in st.session_state:
 
 st.markdown("""
 <style>
-.block-container {padding-top: 2rem; max-width: 1000px;}
+.block-container {padding-top: 4rem; max-width: 1000px;}
+header[data-testid="stHeader"] {background: transparent;}
 .stApp {background: #f4f8f8;}
 [data-testid="stSidebar"] {background: #eaf3f3;}
 .brand {font-size: 2.6rem; font-weight: 800; color: #0b1f33; line-height: 1.1;}
